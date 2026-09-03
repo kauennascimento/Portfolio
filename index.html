@@ -17,10 +17,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <link
-      rel="canonical"
-      href="https://portifolio-iota-ivory-25.vercel.app"
-    />
+    <link rel="canonical" href="https://portifolio-iota-ivory-25.vercel.app" />
 
     <!-- Preconnect / Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -387,17 +384,13 @@
             "
           >
             <form
+              id="contactForm"
               action="https://formsubmit.co/kauenascimento1578@gmail.com"
               method="POST"
               style="flex: 1; min-width: 260px"
             >
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://portifolio-iota-ivory-25.vercel.app/obrigado.html"
-              />
 
               <label style="display: block; margin-bottom: 8px"
                 >Nome<br />
@@ -518,8 +511,46 @@
       </footer>
 
       <script>
-        // Script para atualizar o ano no rodapé automaticamente
+        // Atualiza o ano no rodapé automaticamente
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Envia o formulário pelo FormSubmit via AJAX
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const form = this;
+            const button = form.querySelector('button[type="submit"]');
+
+            button.disabled = true;
+            button.textContent = "Enviando...";
+
+            try {
+              const response = await fetch(form.action, {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                },
+                body: new FormData(form),
+              });
+
+              const data = await response.json();
+
+              if (data.success) {
+                window.location.href =
+                  "https://portifolio-iota-ivory-25.vercel.app/obrigado.html";
+              } else {
+                alert("Não foi possível enviar a mensagem.");
+                button.disabled = false;
+                button.textContent = "Enviar";
+              }
+            } catch (error) {
+              alert("Ocorreu um erro ao enviar a mensagem.");
+              button.disabled = false;
+              button.textContent = "Enviar";
+            }
+          });
       </script>
     </div>
   </body>
