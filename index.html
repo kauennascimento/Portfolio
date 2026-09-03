@@ -526,18 +526,22 @@
             button.disabled = true;
             button.textContent = "Enviando...";
 
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
             try {
               const response = await fetch(form.action, {
                 method: "POST",
                 headers: {
+                  "Content-Type": "application/json",
                   Accept: "application/json",
                 },
-                body: new FormData(form),
+                body: JSON.stringify(data),
               });
 
-              const data = await response.json();
+              const result = await response.json();
 
-              if (data.success) {
+              if (result.success) {
                 window.location.href =
                   "https://portifolio-iota-ivory-25.vercel.app/obrigado.html";
               } else {
@@ -546,6 +550,7 @@
                 button.textContent = "Enviar";
               }
             } catch (error) {
+              console.error(error);
               alert("Ocorreu um erro ao enviar a mensagem.");
               button.disabled = false;
               button.textContent = "Enviar";
