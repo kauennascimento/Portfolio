@@ -1,234 +1,531 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Portfólio profissional — projeto entregue pronto para usar. Site responsivo, acessível e otimizado para desempenho e SEO.">
-  <title>Kauê • Portfólio</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfólio profissional — projeto entregue pronto para usar. Site responsivo, acessível e otimizado para desempenho e SEO."
+    />
+    <title>Kauê • Portfólio</title>
 
-  <!-- SEO / Social -->
-  <meta property="og:title" content="Kauê • Portfólio">
-  <meta property="og:description" content="Desenvolvedor web — projetos, competências e contato.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <link rel="canonical" href="https://kauennascimento.github.io/Portifolio/">
+    <!-- SEO / Social -->
+    <meta property="og:title" content="Kauê • Portfólio" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor web — projetos, competências e contato."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <link
+      rel="canonical"
+      href="https://kauennascimento.github.io/Portifolio/"
+    />
 
-  <!-- Preconnect / Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Preconnect / Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kauê Ryomen",
-    "url": "https://kauennascimento.github.io/Portifolio/",
-    "sameAs": [],
-    "jobTitle": "Desenvolvedor Front-end"
-  }
-  </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kauê Nascimento",
+        "url": "https://github.com/kauennascimento",
+        "sameAs": [],
+        "jobTitle": "Desenvolvedor Front-end"
+      }
+    </script>
 
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa3b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
-      --maxw:1100px; --radius:14px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:#eef2ff}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --muted: #9aa3b2;
+        --accent: #7c3aed;
+        --glass: rgba(255, 255, 255, 0.04);
+        --maxw: 1100px;
+        --radius: 14px;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #071025 0%, var(--bg) 100%);
+        color: #eef2ff;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .container {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 28px;
+      }
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:grid;place-items:center;font-weight:700}
-    nav{display:flex;gap:18px;align-items:center}
-    .btn{padding:8px 14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #2dd4bf);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+      nav {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .btn {
+        padding: 8px 14px;
+        border-radius: 10px;
+        background: var(--glass);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+      }
 
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:center;margin:36px 0}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    h1{font-size:clamp(28px,4.2vw,40px);margin:0 0 10px}
-    p.lead{color:var(--muted);margin:0 0 18px;line-height:1.6}
-    .cta{display:flex;gap:12px}
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 32px;
+        align-items: center;
+        margin: 36px 0;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 14px;
+        border-radius: var(--radius);
+        box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      h1 {
+        font-size: clamp(28px, 4.2vw, 40px);
+        margin: 0 0 10px;
+      }
+      p.lead {
+        color: var(--muted);
+        margin: 0 0 18px;
+        line-height: 1.6;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+      }
 
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .project-preview{height:160px;border-radius:12px;overflow:hidden;position:relative}
-    .project-preview .meta{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.35);padding:6px 10px;border-radius:8px;font-size:13px}
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .project-preview {
+        height: 160px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+      }
+      .project-preview .meta {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 13px;
+      }
 
-    footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
+      footer {
+        margin-top: 36px;
+        padding: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
 
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-      .projects{grid-template-columns:1fr}
-    }
-    @media (max-width:560px){
-      .grid-3{grid-template-columns:1fr}
-      header{gap:8px}
-      .logo{width:40px;height:40px}
-    }
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .grid-3 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .projects {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        header {
+          gap: 8px;
+        }
+        .logo {
+          width: 40px;
+          height: 40px;
+        }
+      }
 
-    a:focus, button:focus{outline:3px solid rgba(124,58,237,0.18);outline-offset:3px}
-  </style>
-</head>
-<body>
-  
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo"> <img src="img1.jpg" alt="Logo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"> </div>
-        <div>
-          <div style="font-weight:600">Kauê Nascimento</div>
-          <div style="font-size:13px;color:var(--muted)">Desenvolvedor Web • Front-end</div>
-        </div>
-      </div>
-      <nav aria-label="Menu principal">
-        <a class="btn" href="#projetos">Projetos</a>
-        <a class="btn" href="#sobre">Sobre</a>
-        <a class="btn" href="#contato">Contato</a>
-      </nav>
-    </header>
+      a:focus,
+      button:focus {
+        outline: 3px solid rgba(124, 58, 237, 0.18);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
 
-    <main>
-      <section class="hero">
-        <div class="card">
-          <h1>Olá — eu sou <span style="color:var(--accent)"> Kauê Nascimento</span>, <br> Desenvolvedor Front-end Iniciante.</h1>
-          <p class="lead">Tenho 18 anos, sou formado no Ensino Médio e estudo desenvolvimento Front-end. Meu objetivo é evoluir para Full Stack e construir aplicações completas e profissionais.</p>
-
-          <div class="cta">
-            <a class="btn" href="#contato">Contrate</a>
-            <a class="btn" href="#projetos">Ver projetos</a>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">
+            <img
+              src="img1.jpg"
+              alt="Logo"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+              "
+            />
           </div>
-
-          <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-
-          <div class="grid-3" style="margin-top:10px">
-            <div class="card" style="padding:12px">
-              <strong>Performance</strong>
-              <div style="color:var(--muted);font-size:14px">Páginas rápidas, imagens responsivas, lazy-load</div>
-            </div>
-            <div class="card" style="padding:12px">
-              <strong>Acessibilidade</strong>
-              <div style="color:var(--muted);font-size:14px">Contraste, navegação por teclado e roles ARIA</div>
-            </div>
-            <div class="card" style="padding:12px">
-              <strong>SEO</strong>
-              <div style="color:var(--muted);font-size:14px">Meta tags, JSON-LD e marcação semântica</div>
+          <div>
+            <div style="font-weight: 600">Kauê Nascimento</div>
+            <div style="font-size: 13px; color: var(--muted)">
+              Desenvolvedor Web • Front-end
             </div>
           </div>
         </div>
+        <nav aria-label="Menu principal">
+          <a class="btn" href="#projetos">Projetos</a>
+          <a class="btn" href="#sobre">Sobre</a>
+          <a class="btn" href="#contato">Contato</a>
+        </nav>
+      </header>
 
-        <aside class="card" aria-label="Destaque">
-          <h3 style="margin-top:0">Resumo</h3>
-          <p style="color:var(--muted);margin-bottom:14px">Front-end minimalista — HTML semântico, CSS organizado, interfaces rápidas e claras. Experiência com responsividade e boas práticas.</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <div class="btn">HTML</div>
-            <div class="btn">CSS</div>
-            <div class="btn">JS</div>
-            <div class="btn">A11y</div>
-          </div>
-        </aside>
-      </section>
+      <main>
+        <section class="hero">
+          <div class="card">
+            <h1>
+              Olá — eu sou
+              <span style="color: var(--accent)"> Kauê Nascimento</span>, <br />
+              Desenvolvedor Front-end Iniciante.
+            </h1>
+            <p class="lead">
+              Sou formado no Ensino Médio e estudo
+              desenvolvimento Front-end. Meu objetivo é evoluir para Full Stack
+              e construir aplicações completas e profissionais.
+            </p>
 
-      <section id="projetos" style="margin-top:6px">
-        <h2 style="margin-bottom:12px">Projetos</h2>
-        <div class="projects">
-
-          <article class="card">
-            <div class="project-preview" style="background:linear-gradient(90deg,#052036,#073554)">
-              <img src="img2.png" alt="projeto1" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="cta">
+              <a class="btn" href="#contato">Contrate</a>
+              <a class="btn" href="#projetos">Ver projetos</a>
             </div>
-            <h4>Hamburgueria LTecnologia</h4>
-            <p style="color:var(--muted);margin:6px 0 0">Site completo criado durante meu estágio. Responsivo e otimizado — HTML, CSS e JS.</p>
-          </article>
 
-          <article class="card">
-            <div class="project-preview" style="background:linear-gradient(90deg,#2b044a,#7c3aed); overflow:hidden;">
-              <img src="img3.jpg" alt="" style="width:100%; height:100%; object-fit:cover; object-position:center;">
-            </div>
-            <h4>Site para Advogado</h4>
-            <p style="color:var(--muted);margin:6px 0 0">Criado no WordPress durante o estágio. Layout profissional e páginas customizadas.</p>
-          </article>
+            <hr
+              style="
+                margin: 18px 0;
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.03);
+              "
+            />
 
-        </div>
-      </section>
-
-      <section id="sobre" style="margin-top:24px">
-        <h2>Sobre mim</h2>
-        <div class="card" style="margin-top:10px">
-          <p style="color:var(--muted)">
-            Sou Kauê Nascimento, desenvolvedor Front-end iniciante.  
-            Já desenvolvi projetos reais durante meu estágio na LTecnologia, incluindo um site de hamburgueria e outro para um advogado.  
-            Meu foco atual é dominar HTML, CSS e JavaScript, além de responsividade e boas práticas.
-          </p>
-        </div>
-      </section>
-
-      <section id="contato" style="margin-top:24px">
-        <h2>Contato</h2>
-        <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
-        <form action="https://formsubmit.co/kauenascimento1578@gmail.com" method="POST" style="flex:1;min-width:260px">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://kauennascimento.github.io/Portifolio">
-          <div id="msg-confirm" style="color:var(--accent);margin-top:10px;display:none">Mensagem enviada com sucesso!</div>
-
-          <label style="display:block;margin-bottom:8px">Nome<br>
-            <input name="name" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-          </label>
-          <label style="display:block;margin-bottom:8px">Email<br>
-            <input name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-          </label>
-          <label style="display:block;margin-bottom:8px">Mensagem<br>
-            <textarea name="message" rows="4" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
-          </label>
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <button class="btn" type="submit">Enviar</button>
-            <button class="btn" type="reset">Limpar</button>
-          </div>
-        </form>
-
-<script>
-  const form = document.querySelector("form");
-  const msg = document.getElementById("msg-confirm");
-  form.addEventListener("submit", (e) => {
-    msg.style.display = "block";
-    setTimeout(() => msg.style.display = "none", 5000);
-  });
-
-  // Script para atualizar o ano no rodapé automaticamente
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-          <div style="min-width:220px">
-            <div style="margin-bottom:12px">
-              <strong>Email</strong>
-              <div style="color:var(--muted)">kauenascimento1578@gmail.com</div>
-            </div>
-            <div style="margin-bottom:12px">
-              <strong>Localização</strong>
-              <div style="color:var(--muted)">Fortaleza — Brasil</div>
-            </div>
-            <div style="margin-bottom:12px">
-              <strong>LinkedIn</strong>
-              <div style="color:var(--muted)">
-                <a href="#" style="color:var(--muted);text-decoration:none">linkedin.com/in/seu-perfil</a>
+            <div class="grid-3" style="margin-top: 10px">
+              <div class="card" style="padding: 12px">
+                <strong>Performance</strong>
+                <div style="color: var(--muted); font-size: 14px">
+                  Páginas rápidas, imagens responsivas, lazy-load
+                </div>
+              </div>
+              <div class="card" style="padding: 12px">
+                <strong>Acessibilidade</strong>
+                <div style="color: var(--muted); font-size: 14px">
+                  Contraste, navegação por teclado e roles ARIA
+                </div>
+              </div>
+              <div class="card" style="padding: 12px">
+                <strong>SEO</strong>
+                <div style="color: var(--muted); font-size: 14px">
+                  Meta tags, JSON-LD e marcação semântica
+                </div>
               </div>
             </div>
-
           </div>
+
+          <aside class="card" aria-label="Destaque">
+            <h3 style="margin-top: 0">Resumo</h3>
+            <p style="color: var(--muted); margin-bottom: 14px">
+              Front-end minimalista — HTML semântico, CSS organizado, interfaces
+              rápidas e claras. Experiência com responsividade e boas práticas.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap">
+              <div class="btn">HTML</div>
+              <div class="btn">CSS</div>
+              <div class="btn">JS</div>
+              <div class="btn">A11y</div>
+            </div>
+          </aside>
+        </section>
+
+        <section id="projetos" style="margin-top: 6px">
+          <h2 style="margin-bottom: 12px">Projetos</h2>
+          <div class="projects">
+            <article class="card">
+              <div
+                class="project-preview"
+                style="background: linear-gradient(90deg, #052036, #073554)"
+              >
+                <img
+                  src="img2.png"
+                  alt="projeto1"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+              <h4>Hamburgueria LTecnologia</h4>
+              <p style="color: var(--muted); margin: 6px 0 0">
+                Site completo criado durante meu estágio. Responsivo e otimizado
+                — HTML, CSS e JS.
+              </p>
+            </article>
+
+            <article class="card">
+              <div
+                class="project-preview"
+                style="
+                  background: linear-gradient(90deg, #2b044a, #7c3aed);
+                  overflow: hidden;
+                "
+              >
+                <img
+                  src="img3.jpg"
+                  alt=""
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+              </div>
+              <h4>Site para Advogado</h4>
+              <p style="color: var(--muted); margin: 6px 0 0">
+                Criado no WordPress durante o estágio. Layout profissional e
+                páginas customizadas.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="sobre" style="margin-top: 24px">
+          <h2>Sobre mim</h2>
+          <div class="card" style="margin-top: 10px">
+            <p style="color: var(--muted)">
+              Sou Kauê Nascimento, desenvolvedor Front-end iniciante. Já
+              desenvolvi projetos reais durante meu estágio na LTecnologia,
+              incluindo um site de hamburgueria e outro para um advogado. Meu
+              foco atual é dominar HTML, CSS e JavaScript, além de
+              responsividade e boas práticas.
+            </p>
+          </div>
+        </section>
+
+        <section id="contato" style="margin-top: 24px">
+          <h2>Contato</h2>
+          <div
+            class="card"
+            style="
+              display: flex;
+              gap: 18px;
+              flex-wrap: wrap;
+              align-items: flex-start;
+            "
+          >
+            <form
+              action="https://formsubmit.co/kauenascimento1578@gmail.com"
+              method="POST"
+              style="flex: 1; min-width: 260px"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://kauennascimento.github.io/Portifolio"
+              />
+              <div
+                id="msg-confirm"
+                style="color: var(--accent); margin-top: 10px; display: none"
+              >
+                Mensagem enviada com sucesso!
+              </div>
+
+              <label style="display: block; margin-bottom: 8px"
+                >Nome<br />
+                <input
+                  name="name"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 6px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.04);
+                    background: transparent;
+                    color: inherit;
+                  "
+                />
+              </label>
+              <label style="display: block; margin-bottom: 8px"
+                >Email<br />
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 6px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.04);
+                    background: transparent;
+                    color: inherit;
+                  "
+                />
+              </label>
+              <label style="display: block; margin-bottom: 8px"
+                >Mensagem<br />
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 6px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.04);
+                    background: transparent;
+                    color: inherit;
+                  "
+                ></textarea>
+              </label>
+              <div style="display: flex; gap: 8px; margin-top: 8px">
+                <button class="btn" type="submit">Enviar</button>
+                <button class="btn" type="reset">Limpar</button>
+              </div>
+            </form>
+
+            <div style="min-width: 220px">
+              <div style="margin-bottom: 12px">
+                <strong>Email</strong>
+                <div style="color: var(--muted)">
+                  kauenascimento1578@gmail.com
+                </div>
+              </div>
+              <div style="margin-bottom: 12px">
+                <strong>Telefone</strong>
+                <div style="color: var(--muted)">
+                  <a
+                    href="tel:+558594321548"
+                    style="color: var(--muted); text-decoration: none"
+                    target="_blank"
+                  >
+                    +55 85 9432-1548
+                  </a>
+                </div>
+              </div>
+              <div style="margin-bottom: 12px">
+                <strong>Localização</strong>
+                <div style="color: var(--muted)">Fortaleza — Brasil</div>
+              </div>
+              <div style="margin-bottom: 12px">
+                <strong>LinkedIn</strong>
+                <div style="color: var(--muted)">
+                  <a
+                    href="https://www.linkedin.com/in/kaue-nascimento-169696400/"
+                    style="color: var(--muted); text-decoration: none"
+                    target="_blank"
+                  >
+                    https://www.linkedin.com/in/kaue-nascimento-169696400/
+                  </a>
+                </div>
+              </div>
+              <div style="margin-bottom: 12px">
+                <strong>GitHub</strong>
+                <div style="color: var(--muted)">
+                  <a
+                    href="https://github.com/kauennascimento"
+                    style="color: var(--muted); text-decoration: none"
+                    target="_blank"
+                  >
+                    https://github.com/kauennascimento
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          © <span id="year"></span> Kauê Nascimento — todos os direitos
+          reservados
         </div>
-      </section>
+      </footer>
 
-    </main>
+      <script>
+        const form = document.querySelector("form");
+        const msg = document.getElementById("msg-confirm");
+        form.addEventListener("submit", (e) => {
+          msg.style.display = "block";
+          setTimeout(() => (msg.style.display = "none"), 5000);
+        });
 
-    <footer>
-      <div>© <span id="year"></span> Kauê Nascimento — todos os direitos reservados</div>
-    </footer>
-
-  </div>
-
-</body>
+        // Script para atualizar o ano no rodapé automaticamente
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </body>
 </html>
