@@ -391,14 +391,8 @@
               <input
                 type="hidden"
                 name="_next"
-                value="https://kauennascimento.github.io/Portifolio"
+                value="https://portifolio-iota-ivory-25.vercel.app/obrigado.html"
               />
-              <div
-                id="msg-confirm"
-                style="color: var(--accent); margin-top: 10px; display: none"
-              >
-                Mensagem enviada com sucesso!
-              </div>
 
               <label style="display: block; margin-bottom: 8px"
                 >Nome<br />
@@ -516,12 +510,6 @@
       </footer>
 
       <script>
-        const form = document.querySelector("form");
-        const msg = document.getElementById("msg-confirm");
-        form.addEventListener("submit", (e) => {
-          msg.style.display = "block";
-          setTimeout(() => (msg.style.display = "none"), 5000);
-        });
 
         // Script para atualizar o ano no rodapé automaticamente
         document.getElementById("year").textContent = new Date().getFullYear();
